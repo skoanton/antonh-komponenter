@@ -14,10 +14,10 @@ function App() {
         listItems={listItems}
         dropdownLabel="ListBox 1"
         dropdownPlaceholder="Pick a name"
-        multipleList={false}
+        multipleList={true}
         multipleListSize={10}
-        inlineDropdown={true}
-        boxBorder={false}
+        inlineDropdown={false}
+        boxBorder={true}
         borderSizeInPixels={1}
       />
     </>

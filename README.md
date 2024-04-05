@@ -32,7 +32,7 @@ type ListBoxProps = {
 />
 ```
 
-![alt text](image.png)
+![alt text](image-2.png)
 
 ### Utan border och en inline
 
