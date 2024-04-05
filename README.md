@@ -1,6 +1,6 @@
 # List box kompontent
 
-Jag har gjort en dropdown komponent som tar inte följande props
+Jag har gjort en dropdown komponent som tar in följande props
 
 ```js
 type ListBoxProps = {
