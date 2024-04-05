@@ -1,0 +1,38 @@
+@use "../../scss/abstracts/colors" as color;
+
+.dropdown-container{
+    padding: 1rem;
+    width: max-content;
+    background-color: "";
+    
+    .list-box{
+        display: flex;
+        
+        max-width: max-content;
+        
+        label{
+            text-align: center;
+            
+        }
+        select{
+            background-color: color.$secondary;
+            color: color.$text;  
+            min-width: 20rem;
+            max-width: max-content;
+            
+            .placeholder{
+                font-weight: bold;
+                text-decoration: underline;
+            }
+            
+            
+        }
+        
+    }
+    .flex-direction-column{
+        flex-direction: column;
+    }
+    .flex-direction-row{
+        flex-direction: row;
+    }
+}
