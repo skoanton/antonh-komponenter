@@ -1,6 +1,6 @@
 # List box kompontent
 
-Jag har gjort en dropdown komponent som tar inte följande props
+Jag har gjort en dropdown komponent som tar in följande props
 
 ```js
 type ListBoxProps = {
@@ -14,3 +14,39 @@ type ListBoxProps = {
   borderSizeInPixels: number, //Hur stor bordern ska vara
 };
 ```
+
+## Några exempel på hur det kan se ut
+
+### Med Border och multilist
+
+```js
+<ListBox
+  listItems={listItems}
+  dropdownLabel="ListBox 1"
+  dropdownPlaceholder="Pick a name"
+  multipleList={true}
+  multipleListSize={10}
+  inlineDropdown={false}
+  boxBorder={true}
+  borderSizeInPixels={1}
+/>
+```
+
+![alt text](image-2.png)
+
+### Utan border och en inline
+
+```js
+<ListBox
+  listItems={listItems}
+  dropdownLabel="ListBox 1"
+  dropdownPlaceholder="Pick a name"
+  multipleList={false}
+  multipleListSize={10}
+  inlineDropdown={true}
+  boxBorder={false}
+  borderSizeInPixels={1}
+/>
+```
+
+![alt text](image-1.png)
