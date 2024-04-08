@@ -1,0 +1,30 @@
+.accordion {
+  margin: 2rem auto;
+
+  h1 {
+    text-align: center;
+    margin: 2rem 0 4rem 0;
+    color: var(--text-color);
+  }
+  .accordion-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: var(--accordion-title-bg, #3d3d3d);
+  }
+
+  .accordion-title:hover {
+    background-color: var(--accordion-title-hover-bg, #97a4a7);
+  }
+
+  .accordion-title,
+  .accordion-content {
+    padding: 1rem;
+    color: var(--text-color);
+  }
+
+  .accordion-content {
+    background-color: var(--accordion-content-bg, #3d3d3d);
+  }
+}
