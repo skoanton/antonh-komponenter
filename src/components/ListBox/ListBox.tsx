@@ -7,6 +7,7 @@ type ListBoxProps = {
   inlineDropdown: boolean;
   boxBorder: boolean;
   borderSizeInPixels: number;
+  children: React.ReactNode;
 };
 
 const ListBox = ({
@@ -18,9 +19,10 @@ const ListBox = ({
   inlineDropdown,
   boxBorder,
   borderSizeInPixels,
+  children
 }: ListBoxProps) => {
   return (
-    <article
+    <article id="dropdown-container"
       className="dropdown-container"
       style={
         boxBorder
@@ -28,6 +30,7 @@ const ListBox = ({
           : { border: "none" }
       }
     >
+      {children}
       {/*Show mulilist dropdown*/}
       {multipleList && !inlineDropdown ? (
         <section className="list-box flex-direction-column">
@@ -51,46 +54,10 @@ const ListBox = ({
           </select>
         </section>
       ) : /*Show normal dropdown*/
-      !multipleList && !inlineDropdown ? (
-        <section className="list-box flex-direction-column">
-          <label htmlFor="">{dropdownLabel}</label>
-          <select name={dropdownLabel} id="listItems">
-            <option value="" className="placeholder">
-              {dropdownPlaceholder}
-            </option>
-            {listItems.map((item, index) => (
-              <option key={index}>{item}</option>
-            ))}
-          </select>
-        </section>
-      ) : /*Showing inlineDropdown*/
-      !multipleList && inlineDropdown ? (
-        <section className="list-box flex-direction-row">
-          <label htmlFor="">{dropdownLabel}</label>
-          <select name={dropdownLabel} id="listItems">
-            <option value="" className="placeholder">
-              {dropdownPlaceholder}
-            </option>
-            {listItems.map((item, index) => (
-              <option key={index}>{item}</option>
-            ))}
-          </select>
-        </section>
-      ) : (
-        multipleList &&
-        inlineDropdown && (
-          <section className="list-box flex-direction-row">
+        !multipleList && !inlineDropdown ? (
+          <section className="list-box flex-direction-column">
             <label htmlFor="">{dropdownLabel}</label>
-            <select
-              name={dropdownLabel}
-              id="listItems"
-              multiple
-              size={
-                multipleListSize > listItems.length
-                  ? listItems.length + 1
-                  : multipleListSize
-              }
-            >
+            <select name={dropdownLabel} id="listItems">
               <option value="" className="placeholder">
                 {dropdownPlaceholder}
               </option>
@@ -99,8 +66,45 @@ const ListBox = ({
               ))}
             </select>
           </section>
-        )
-      )}
+        ) : /*Showing inlineDropdown*/
+          !multipleList && inlineDropdown ? (
+            <section className="list-box flex-direction-row">
+              <label htmlFor="">{dropdownLabel}</label>
+              <select name={dropdownLabel} id="listItems">
+                <option value="" className="placeholder">
+                  {dropdownPlaceholder}
+                </option>
+                {listItems.map((item, index) => (
+                  <option key={index}>{item}</option>
+                ))}
+              </select>
+            </section>
+          ) : (
+            multipleList &&
+            inlineDropdown && (
+              <section className="list-box flex-direction-row">
+                <label htmlFor="">{dropdownLabel}</label>
+                <select
+                  name={dropdownLabel}
+                  id="listItems"
+                  multiple
+                  size={
+                    multipleListSize > listItems.length
+                      ? listItems.length + 1
+                      : multipleListSize
+                  }
+                >
+                  <option value="" className="placeholder">
+                    {dropdownPlaceholder}
+                  </option>
+                  {listItems.map((item, index) => (
+                    <option key={index}>{item}</option>
+                  ))}
+                </select>
+              </section>
+            )
+          )}
+
     </article>
 
     // next statement

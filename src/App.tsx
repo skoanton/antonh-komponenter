@@ -1,4 +1,5 @@
 import ListBox from "./components/ListBox/ListBox";
+import Mode from "./components/Mode/Mode";
 function App() {
   const listItems: string[] = [
     "Robert",
@@ -19,7 +20,7 @@ function App() {
         inlineDropdown={false}
         boxBorder={true}
         borderSizeInPixels={1}
-      />
+      ><Mode /></ListBox>
     </>
   );
 }
