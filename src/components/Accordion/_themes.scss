@@ -1,0 +1,20 @@
+:root {
+    --accordion-title-bg: #3d3d3d;
+    --accordion-title-hover-bg: #97a4a7;
+    --accordion-content-bg: #3d3d3d;
+    --text-color: white; 
+  }
+  
+  .theme-dark {
+    --accordion-title-bg: #3d3d3d;
+    --accordion-title-hover-bg: #97a4a7;
+    --accordion-content-bg: #3d3d3d;
+    --text-color: white;
+  }
+  
+  .theme-light {
+    --accordion-title-bg: #f4f4f4;
+    --accordion-title-hover-bg: #d1d1d1;
+    --accordion-content-bg: #e6e6e6;
+    --text-color: black;
+  }
