@@ -1,13 +1,6 @@
-type ListBoxProps = {
-  listItems: string[];
-  dropdownPlaceholder: string;
-  dropdownLabel: string;
-  multipleList: boolean;
-  multipleListSize: number;
-  inlineDropdown: boolean;
-  boxBorder: boolean;
-  borderSizeInPixels: number;
-};
+import { ListBoxProps } from "../../types/types";
+import Button from "../Button/Button";
+
 
 const ListBox = ({
   listItems,
@@ -101,9 +94,8 @@ const ListBox = ({
           </section>
         )
       )}
+      <Button text={"Choose"}/>
     </article>
-
-    // next statement
   );
 };
 
