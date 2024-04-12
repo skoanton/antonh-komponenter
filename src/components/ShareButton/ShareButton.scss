@@ -1,4 +1,4 @@
-@import "../../scss/abstracts/colors";  
+@use "../../scss/abstracts/colors" as color;  
   
   *, ::before, ::after {
     box-sizing: border-box;
@@ -47,9 +47,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(45deg, $--gradient-start-color, $--gradient-end-color);
-        box-shadow: $--gradient-start-color 0 15px 18px -8px;
-        color: $--icon-color;
+        background: linear-gradient(45deg, color.$gradient-start-color, color.$gradient-end-color);
+        box-shadow: color.$gradient-start-color 0 15px 18px -8px;
+        color: color.$icon-color;
         border-radius: 50%;
         cursor: pointer;
         z-index: 10;
@@ -63,7 +63,7 @@
       input:checked ~ label {
         opacity: 0;
         transform: scale(.8);
-        box-shadow: 0 0 0 30px $--custom-black-color;
+        box-shadow: 0 0 0 30px color.$custom-black-color;
         transition: opacity .2s 1s, transform 1s, box-shadow 1s;
       }
   
@@ -75,7 +75,7 @@
         padding: 20px 25px;
         margin: auto;
         border-radius: 40px;
-        background-color: $--translucent-White;
+        background-color: color.$translucent-White;
         width: 100px;
         opacity: 0;
         transition: width .3s, opacity .2s;
@@ -95,7 +95,7 @@
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        color: $--icon-color;
+        color: color.$icon-color;
         transition: transform .3s;
       }
   
@@ -118,28 +118,28 @@
       }
   
       ul li.twitter a {
-        background-color: $--twitter-color;
-        box-shadow: $--twitter-color 0 15px 18px -8px;
+        background-color: color.$twitter-color;
+        box-shadow: color.$twitter-color 0 15px 18px -8px;
       }
       
       ul li.facebook a {
-        background-color: $--facebook-color;
-        box-shadow: $--facebook-color 0 15px 18px -8px;
+        background-color: color.$facebook-color;
+        box-shadow: color.$facebook-color 0 15px 18px -8px;
       }
       
       ul li.close a {
-        background-color: $--close-color;
-        box-shadow: $--close-color 0 15px 18px -8px;
+        background-color: color.$close-color;
+        box-shadow: color.$close-color 0 15px 18px -8px;
       }
       
       ul li.discord a {
-        background-color: $--discord-color;
-        box-shadow: $--discord-color 0 15px 18px -8px;
+        background-color: color.$discord-color;
+        box-shadow: color.$discord-color 0 15px 18px -8px;
       }
       
       ul li.whatsapp a {
-        background-color: $--whatsapp-color;
-        box-shadow: $--whatsapp-color 0 15px 18px -8px;
+        background-color: color.$whatsapp-color;
+        box-shadow: color.$whatsapp-color 0 15px 18px -8px;
       }
   
       ul li a:hover {

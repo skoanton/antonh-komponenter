@@ -1,7 +1,7 @@
 import Accordion from "./components/Accordion/Accordion";
 import ListBox from "./components/ListBox/ListBox";
 import Navbar from "./components/Navbar/NavBar";
-// import ShareButton from "./components/ShareButton/ShareButton";
+import ShareButton from "./components/ShareButton/ShareButton";
 
 //-------------------------------------------NavBar-----------------------------------------------//
 const GoToNavLink = [
@@ -49,7 +49,7 @@ function App() {
         borderSizeInPixels={1}
       />
       <Accordion title={"Test Anton"} content={'Test content'} theme={"dark"} />
-      {/* <ShareButton socialLinks={socialLinks} /> */}
+      <ShareButton socialLinks={socialLinks} />
     </>
   );
 }
