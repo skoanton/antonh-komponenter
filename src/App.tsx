@@ -1,4 +1,5 @@
 import Accordion from "./components/Accordion/Accordion";
+import Form from "./components/Form/Form";
 import ListBox from "./components/ListBox/ListBox";
 function App() {
   const listItems: string[] = [
@@ -22,6 +23,7 @@ function App() {
         borderSizeInPixels={1}
       />
       <Accordion title={"Test Anton"} content={'Test content'} theme={"dark"} />
+      <Form/>
     </>
   );
 }
